@@ -3,3 +3,12 @@ import string
 
 
 
+class User():
+
+
+
+
+
+class Credentials():
+
+
