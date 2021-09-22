@@ -1,3 +1,4 @@
+from _typeshed import Self
 import random
 import string
 
@@ -30,7 +31,7 @@ class User:
 
 
     @classmethod
-    def display_user():
+    def display_user(cls):
         return cls.user_list
 
 
