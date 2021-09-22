@@ -51,6 +51,28 @@ class Credentials:
 
     Credentials_list =[]
 
+    @classmethod
+    def verify_user(cls,username,password):
+
+        '''
+        method that check if username and credentials match or else return a message
+        
+        '''
+
+        for user in User.user_list():
+            if user.username == username and user.password == password :
+                a_user = user.username and user.password
+
+                return a_user
+            else:
+                print('wrong username or password')
+
+
+    
+
+
+
+
    
 
 
