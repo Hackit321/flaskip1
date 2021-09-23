@@ -28,21 +28,28 @@ class TestClass(unittest.TestCase):
         self.new_user.save_user()
         self.assertEquals(len(User.user_list),1)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 class TestCredentials(unittest.TestCase):
     '''
     A Test class that defines test case for the credentials
     '''
+    def setUp(self):
+        '''
+        Mehtod that run each testcase
+        '''
+        new_credentials =Credentials(self,'Gmial','mark_kk','mark002.')
+
+    def test_inti(self,account,userName,password):
+            '''
+            testcase method that check if user credentials instances have been initialized
+            '''
+            self.assertEquals(self.new_credentials.account,'Gmail')
+            self.assertEquals(self.new_credenital.userName,'mark_kk')
+            self.assertEquals(self.new_credentials.password,'mark002.')
+
+
+
+
+            
+   
+        
