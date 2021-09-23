@@ -14,6 +14,12 @@ class TestClass(unittest.TestCase):
         return super().setUp()
     
     def test_init(self):
+        '''
+        test_init testcase that test if the object has been initialized correctly
+        '''
+        self.assertEquals(self.new_user.username,'mark')
+        self.assertEquals(self.new_user.password,'mark002.')
+
 
 
 
