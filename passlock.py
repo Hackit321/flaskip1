@@ -32,6 +32,10 @@ class User:
 
     @classmethod
     def display_user(cls):
+        '''
+        function that returns the display user detials
+        '''
+
         return cls.user_list
 
 
@@ -68,6 +72,22 @@ class Credentials:
             else:
                 print('wrong username or password')
 
+    def __init__(self,acccount,userNamme,password):
+        '''
+        function that defines user credentials
+        '''
+        self.account = acccount
+        self.uerName =userNamme
+        self.password = password
+        
+
+    def save_credentials(self):
+        '''
+        mehtod saves user credentials
+        '''
+        Credentials.Credentials_list.append(self)
+
+    
 
     
 
