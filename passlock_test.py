@@ -47,9 +47,23 @@ class TestCredentials(unittest.TestCase):
             self.assertEquals(self.new_credenital.userName,'mark_kk')
             self.assertEquals(self.new_credentials.password,'mark002.')
 
+    def test_save_credentials(self):
+        '''
+        testcase to check if credentials object is saved in credentials list
+        '''
+        self.new_credentials(self)
+        self.new_credentials(len(Credentials.Credentials_list),1)
 
 
 
+    def teaarDown(self):
+        '''
+        method that clean up after each test case has run
+        '''
+        Credentials.Credentials_list = []
+
+
+   
             
    
         
