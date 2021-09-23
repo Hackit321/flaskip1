@@ -1,6 +1,7 @@
 from _typeshed import Self
 import random
 import string
+import pyperclip
 
 
 class User:
@@ -63,7 +64,7 @@ class Credentials:
         method that check if username and credentials match or else return a message
         
         '''
-
+       
         for user in User.user_list():
             if user.username == username and user.password == password :
                 a_user = user.username and user.password
@@ -86,6 +87,37 @@ class Credentials:
         mehtod saves user credentials
         '''
         Credentials.Credentials_list.append(self)
+
+
+    def find_credentials(cls,account):
+        '''
+        mehtod that find user information 
+        '''
+
+        for credentials in cls.credentials_list:
+            if credentials.account == account:
+                return True
+            else:
+                return print(string('user credentials cannot be found'))
+                
+    @classmethod
+    def copy_password(cls,account):
+        found_credentials = Credentials.find_credentials(account)
+        pyperclip.copy(found_credentials.password)
+    
+          
+    def if_credential_exit(cls,account):
+        '''
+        method that checks if user credentials exits from the credentiasl list saved
+        '''
+
+
+
+
+
+
+
+
 
     
 
