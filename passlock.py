@@ -129,7 +129,14 @@ class Credentials:
 
 
     @classmethod
-    def 
+    def generate_password(stringLenght=8):
+        '''
+        method  that generate a random password for the user 
+        '''
+        password = string.ascii_uppercase + string.ascii_lowercase + string.digits + "!&^%$#"
+        return ''.join(random.choice(password) for i in range(stringLenght)) 
+
+    
 
 
 
