@@ -104,12 +104,32 @@ class Credentials:
     def copy_password(cls,account):
         found_credentials = Credentials.find_credentials(account)
         pyperclip.copy(found_credentials.password)
+
+
     
-          
+    @classmethod   
     def if_credential_exit(cls,account):
         '''
         method that checks if user credentials exits from the credentiasl list saved
         '''
+        for credentials in cls.Credentials_list:
+            if credentials.account == account:
+                return True
+
+        else:
+            print('credentials does not exits')
+
+
+    @classmethod
+    def display_credentials(cls):
+        '''
+        method that display all user credentials list
+        '''
+        return cls.Credentials_list
+
+
+    @classmethod
+    def 
 
 
 
