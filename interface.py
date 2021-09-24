@@ -105,13 +105,23 @@ def main():
             else:
                 print("invalid choice please try again....")
                 return  print(" TP - To type your own pasword:\n GP - To generate random Password")
-                      print("Invalid password please try again")
+                     
         save_user(create_new_user(username,password))
-        print("*"*85)
+        print("*"*'safelock')
         print(f"Hello {username}, Your account has been created succesfully! Your password is: {password}")
-        print("*"*85)
+        print("*"*'safelcok')
 
-   
+    elif short_code == "li":
+        print("*"'safelock')
+        print("Enter your User name and your Password to log in:")
+        print('*''safelcok')
+        username = input("User name: ")
+        password = input("password: ")
+        login = login_user(username,password)
+        return login_user(username,password)
+    if login_user == login:
+            print(f"Hello {username}.Welcome To PassWord Locker Manager")  
+            print('safelcok')
 
 
 
