@@ -1,7 +1,7 @@
 from _typeshed import Self
 import random
 import string
-import pyper
+import pyperclip
 
 
 class User:
