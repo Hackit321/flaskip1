@@ -118,10 +118,28 @@ def main():
         username = input("User name: ")
         password = input("password: ")
         login = login_user(username,password)
-        return login_user(username,password)
-    if login_user == login:
+        return print("hera are your credentials"+ login)
+    if login_user == Credentials.verify_user(username,password):
             print(f"Hello {username}.Welcome To PassWord Locker Manager")  
             print('safelcok')
-
+    while True:
+        print("Use these short codes:\n CC - Create a new credential \n DC - Display Credentials \n FC - Find a credential \n GP - Generate A randomn password \n D - Delete credential \n EX - Exit the application \n")
+        short_code = input().lower()
+        if short_code == "cc":
+            print("Create New Credential")
+            print("."'safelock')
+            input('enter account name:')
+            account = input().lower()
+            print("Your Account username")
+            userName = input()
+            while True:
+                print(" TP - To type your own pasword if you already have an account:\n GP - To generate random Password")
+                password_Choice = input().lower().strip()
+                if password_Choice == 'tp':
+                    password = input("Enter Your Own Password\n")
+                    break
+                elif password_Choice == 'gp':
+                    password = generate_password()
+                    break
 
 
