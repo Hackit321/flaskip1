@@ -7,7 +7,7 @@ def logo():
 
 
 
-def create_new_user(username,password):
+ def create_new_user(username,password):
     '''
     function to create a new user with a username and password
     '''
@@ -20,11 +20,6 @@ def save_user(username,password):
     '''
     User.save_user(username,password)
 
-def display_user():
-    '''
-    function to display existing user
-    '''
-    return User.display_user()
 
 def login_user(username,password):
     '''
@@ -32,6 +27,38 @@ def login_user(username,password):
     '''
     check_user = Credentials.verify_user(username,password)
     return check_user
+def create_new_user(account,userName,password):
+    '''
+    function creates new credentials for the user
+    '''
+    new_credentials =Credentials(account,userName,password)
+    return new_credentials
+
+def save_credentials(credentials):
+    '''
+    function that saves user credentials
+    '''
+    credentials.save_credentails(credentials)
+def display_credentials():
+    '''
+    function that returns all the saved user credentals
+    '''
+    return Credentials.display_credentials()
+
+def delete_credetials():
+    '''
+    functions that delete user credentails from credentials list
+    '''
+    Credentials.delete_credentials()
+
+
+
+def display_user():
+    '''
+    function to display existing user
+    '''
+    return User.display_user()
+
 
 
 
