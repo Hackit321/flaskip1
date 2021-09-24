@@ -1,3 +1,4 @@
+import unittest
 from passlock import User,Credentials
 
 def logo():
@@ -197,4 +198,5 @@ def main():
         print('please enter valid input')
 
 
-
+if __name__ == '__main__':
+    unittest.app
