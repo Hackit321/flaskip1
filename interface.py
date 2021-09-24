@@ -99,8 +99,18 @@ def main():
                 password = input("Enter Password\n")
                 break
             elif password_Choice == 'gp':
-                password = generate_Password()
+                password = generate_password()
+                print("your password is being generated")
                 break
+            else:
+                print("invalid choice please try again....")
+                return  print(" TP - To type your own pasword:\n GP - To generate random Password")
+                      print("Invalid password please try again")
+        save_user(create_new_user(username,password))
+        print("*"*85)
+        print(f"Hello {username}, Your account has been created succesfully! Your password is: {password}")
+        print("*"*85)
+
    
 
 
