@@ -1,3 +1,4 @@
+from interface import create_new_user
 import unittest
 from passlock import User,Credentials
 
@@ -61,6 +62,15 @@ class TestCredentials(unittest.TestCase):
         method that clean up after each test case has run
         '''
         Credentials.Credentials_list = []
+
+
+    def test_save_many_accounts(self):
+        '''
+        test to check if many credentials can be saved in the credentials list
+        '''
+        test_credentials = Credentials('mark','mark002','markoo2')
+        test_credentials.save_details()
+        self.assertEquals(Credentials.Credentials_list)
 
 
    
