@@ -70,10 +70,8 @@ class TestCredentials(unittest.TestCase):
         '''
         test_credentials = Credentials('mark','mark002','markoo2')
         test_credentials.save_details()
-        self.assertEquals(Credentials.Credentials_list)
+        self.assertEquals(Credentials.Credentials_list_found)
 
 
-   
-            
-   
-        
+if __name == '__main__':
+    unittest.main()
