@@ -13,8 +13,6 @@ pip
 Cloning
 Open Terminal {Ctrl+Alt+T}
 
-git clone https://github.com/Owiti-Charles/Password-Locker.git
-
 cd Password-Locker
 
 code . or atom . based on the text editor you have.
